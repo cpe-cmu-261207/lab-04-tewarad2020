@@ -6,11 +6,42 @@
     font-family: 'Akaya Kanadaka', cursive;
 }
 
+
+
+.bntchange 
+{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    right: 15px;
+    top: 15px;
+}
+
+.bntchangeactive
+{
+    background-color: rgb(0, 153, 255);
+    position: absolute;
+    border-radius: 20px;
+    right: 15px;
+    top: 15px;
+}
+
+
+.bntchange p
+{
+    color: rgb(255, 255, 255);
+}
+
+
 body
 {
     padding: 20px;
+    background-color: rgb(0, 153, 255);
+}
+
+.dark
+{
     background-color: rgb(0, 0, 0);
-    position: relative;
 }
 
 .container
@@ -18,8 +49,6 @@ body
     position: relative;
     height: 250px;
     left: 0;
-    /* left: calc(50% - 125px);  */
-    /* background-color: blue; */
     padding: 15px;
 }
 
@@ -39,7 +68,7 @@ body
     position: absolute;
     width: 400px;
     height: 400px;
-    background: linear-gradient(#2196f3,#dc83ff);
+    background: linear-gradient(#04579b,#dc83ff);
     border-radius: 50%;
     transform: translate(700px, 320px);
 }
@@ -51,8 +80,8 @@ body
     background-color: rgba(231, 230, 229, 0.3);
     text-align: center;
     height: 550px;
-    width: 500px;
-    left: calc(50% - 225px);
+    min-width: 39.2%;
+    left: 30%;
     border-radius: 10px;
     padding: 10px;
     padding-top: 15px;
@@ -60,11 +89,23 @@ body
     /* filter: blur(10px); */
 }
 
+#idmenu
+{
+    position: relative;
+    height: 410px;
+    width: 100%;
+    left: 5px;
+    /* background-color: #2196f3; */
+    overflow-y: scroll;
+    z-index: 1;
+}
+
 .menu::before
 {
     content: '';
     position: absolute;
     background-color: rgba(56, 54, 54, 0.3);
+    display: flex;
     width: 1000px;
     height: 1000px;
     top: 0px;
@@ -75,7 +116,7 @@ body
 .menu::after
 {
     content: 'Mylist';
-    color: #a8a4a4;
+    color: #080808;
     font-size: 8em;
     position: absolute;
     top: 35%;
@@ -87,7 +128,7 @@ body
 
 input
 {
-    width: 430px;
+    width: 100%;
     border-radius: 25px 0 0 25px;
     background-color: rgba(255, 255, 255, 0.5);
     transition: .5s;
@@ -102,8 +143,14 @@ input
 
 .inp
 {
-    position: absolute;
+    position: relative;
+    width: 100%;
     margin: 25px 0 ;
+}
+
+.conbtnandinp
+{
+    display: flex;
 }
 
 input[type=text]:focus 
@@ -128,11 +175,11 @@ button
 
 .btn
 {
-    position: absolute;
+    position: relative;
     width: 45px;
     height: 24px;
-    right: 11px;
-    top: 80px;
+    right: -3px;
+    top: 25px;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 0 10px 10px 0;
     font-size: 2em;
@@ -147,16 +194,19 @@ button
 
 h1
 {
-    color: #fff;
+    color: rgb(0, 0, 0);
     text-decoration: underline;
 }
 
+.activeh1
+{
+    color: rgb(255, 255, 255);
+}
 
 .maindiv
 {
     position: relative;
-    top: -120px;
-    left: calc(50% - 225px);
+    top: 0px;
     color: #fff;
 }
 
@@ -166,17 +216,20 @@ h1
     position: relative;
     display: flex;
     height: 20px;
-    width: 450px;
+    width: 90%;
     margin-top: 10px;
+    margin-left: 15px;
     align-items: center;
     padding: 15px;
     border-bottom: #fff solid 1px;
     cursor: pointer;
 }
 
-.spanmain span
+.spanmain span 
 {
     position: absolute;
+    left: 0;
+    text-align: start;
     width: 230px;
     overflow-x: hidden;
     /* transform: scale(1.2); */
@@ -190,7 +243,6 @@ h1
     font-size: 24px;
     font-weight: 700;
 }
-
 
 .spanmain:nth-child(1) span
 {
