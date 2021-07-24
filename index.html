@@ -17,17 +17,25 @@
 </head>
 
 <body>
-	<div class="circle1"></div>
-	<div class="circle2"></div>
+	<div class="circle1 shadow-2xl"></div>
+	<div class="circle2 shadow-2xl"></div>
+	<span>
+		<button class="bntchange" onclick="active()">
+		<p>Dark</p>
+		</button>
+	</span>
 	<div class="container">
-		<div class="menu">
+		<div class="menu shadow-2xl">
 			<h1 class="text-4xl">Minimal Todo List</h1>
-			<div class="inp">
-				<input class="text-white" type='text' placeholder="Enter your list...">
+			<div class="conbtnandinp">
+				<div class="inp">
+					<input class="text-white" type='text' placeholder="Enter your list...">
+				</div>
+				<div class="btn">
+					<button onclick="Clicktoadd()">+</button>
+				</div>
 			</div>
-			<div class="btn">
-				<button onclick="Clicktoadd()">+</button>
-			</div>
+			<div id="idmenu"></div>
 		</div>
 	</div>
 </body>
