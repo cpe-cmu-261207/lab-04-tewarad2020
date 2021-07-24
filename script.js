@@ -25,7 +25,7 @@ const Clicktoadd = () => {
             if (reset != null) reset.remove()
             maindiv = document.createElement('div')
             maindiv.classList.add('maindiv')
-            document.body.append(maindiv)
+            document.getElementById("idmenu").appendChild(maindiv);
             isdone = 0
             show ()
         }
@@ -39,7 +39,7 @@ const Clicktoadd = () => {
             if (reset != null) reset.remove()
             maindiv = document.createElement('div')
             maindiv.classList.add('maindiv')
-            document.body.append(maindiv)
+            document.getElementById("idmenu").appendChild(maindiv);
             isdone = 0
             show ()
         }
@@ -80,7 +80,7 @@ function show () {
                 if (reset != null) reset.remove()
                 maindiv = document.createElement('div')
                 maindiv.classList.add('maindiv')
-                document.body.append(maindiv)
+                document.getElementById("idmenu").appendChild(maindiv);
                 isdone = 0   
                 show ()
             } 
@@ -109,7 +109,7 @@ function show () {
                 if (reset != null) reset.remove()
                 maindiv = document.createElement('div')
                 maindiv.classList.add('maindiv')
-                document.body.append(maindiv)
+                document.getElementById("idmenu").appendChild(maindiv);
                 isdone = 0
                 show ()
             }
@@ -135,7 +135,29 @@ function show () {
     }
     console.log('size : ' + size)
 }
-document.body.append(maindiv)
+document.getElementById("idmenu").appendChild(maindiv);
 if (localStorage.length != 0) show ()
 
+let p = -1
+const active = () => {
+    const body = document.querySelector('body')
+    const target = document.querySelector('.bntchange')
+    const h1 = document.querySelector('h1')
+    const tagp = document.querySelector('p')
+    if (p === -1) {
+        body.classList.add('dark')
+        target.classList.add('active')
+        h1.classList.add('activeh1')
+        target.classList.add('bntchangeactive')
+        tagp.innerHTML = 'Blue'
+         p *= -1
+    }else {
+        body.classList.remove('dark')
+        target.classList.remove('bntchangeactive')
+        target.classList.remove('active')
+        h1.classList.remove('activeh1')
+        tagp.innerHTML = 'Dark'
+         p *= -1
+    }
+}
 
