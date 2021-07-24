@@ -6,14 +6,30 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src='script.js' defer></script>
-	<title>Lab 04</title>
-	<!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+	<title>Minimal Todo List</title>
+
+	<!-- link -->
+	<link rel="stylesheet" href="CSSstyle.css">
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
-	<h1>Minimal Todo List</h1>
-	<input  type='text'>
-	<button>+</button>
+	<div class="circle1"></div>
+	<div class="circle2"></div>
+	<div class="container">
+		<div class="menu">
+			<h1 class="text-4xl">Minimal Todo List</h1>
+			<div class="inp">
+				<input class="text-white" type='text' placeholder="Enter your list...">
+			</div>
+			<div class="btn">
+				<button onclick="Clicktoadd()">+</button>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
